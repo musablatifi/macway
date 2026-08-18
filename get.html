@@ -27,26 +27,33 @@
     </div>
   </div>
 
-  <nav class="navbar">
+    <!-- ── NAVBAR ── -->
+  <nav class="navbar" id="main-nav">
     <div class="container">
-      <a href="index.html" class="navbar-brand"><img src="images/logo.jpg" alt="Macway Biotech Logo"></a>
+      <a href="index.html" class="navbar-brand">
+        <img src="images/logo.jpg" alt="Macway Biotech Logo">
+      </a>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+
       <ul class="nav-links" id="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li>
-          <a href="#">Product Portfolio</a>
+        <li class=""><a href="index.html">Home</a></li>
+        <li class=""><a href="about.html">About Us</a></li>
+        <li class="">
+          <a href="#">Product Portfolio <i class="fa fa-caret-down" style="margin-left: 4px;"></i></a>
           <ul class="nav-dropdown">
             <li><a href="neuro.html">Neuro Care</a></li>
             <li><a href="physhiatry.html">Psychiatry</a></li>
             <li><a href="woundcare.html">Wound Care</a></li>
           </ul>
-
-      <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </button>
+        </li>
+        <li class=""><a href="news.html">News &amp; Updates</a></li>
+        <li class="active"><a href="get.html" class="nav-cta">Get in Touch</a></li>
+      </ul>
     </div>
   </nav>
-
 
   <div class="page-banner">
     <div class="page-banner-content">
