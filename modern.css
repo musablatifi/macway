@@ -92,7 +92,7 @@ ul { list-style: none; }
 
 /* ── NAVBAR ── */
 .navbar {
-  position: static;
+  position: relative; /* Crucial for absolute mobile dropdown positioning */
   z-index: 1000;
   background: rgba(255,255,255,1);
   border-bottom: 1px solid rgba(10,22,40,.09);
@@ -1167,6 +1167,7 @@ ul { list-style: none; }
   .hero-content {
     max-width: 100%;
     text-align: center;
+    padding-top: 40px; /* Prevent badge from hitting top edge */
     padding-bottom: 60px; /* Prevent overlap with absolute dots at bottom */
   }
   .hero-badge {
