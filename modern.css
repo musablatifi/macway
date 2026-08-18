@@ -130,7 +130,7 @@ ul { list-style: none; }
   align-items: center;
   gap: 2px;
   flex: 1;
-  justify-content: center;
+  justify-content: flex-end;
 }
 .nav-links li { position: relative; }
 .nav-links > li > a {
