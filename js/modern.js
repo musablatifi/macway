@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (dropdown) {
         const link = li.querySelector('a');
         link.addEventListener('click', (e) => {
-          if (window.innerWidth <= 768) {
+          if (window.innerWidth <= 991) {
             e.preventDefault();
             li.classList.toggle('open');
           }
