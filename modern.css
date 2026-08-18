@@ -1162,11 +1162,12 @@ ul { list-style: none; }
 
   /* Hero section adjustments */
   .hero {
-    min-height: 480px;
+    min-height: 520px;
   }
   .hero-content {
     max-width: 100%;
     text-align: center;
+    padding-bottom: 60px; /* Prevent overlap with absolute dots at bottom */
   }
   .hero-badge {
     margin: 0 auto 20px;
@@ -1184,11 +1185,12 @@ ul { list-style: none; }
     width: 100%;
     max-width: 320px;
     margin: 0 auto;
-    gap: 12px;
+    gap: 20px;
   }
   .btn-primary, .btn-outline {
     width: 100%;
     justify-content: center;
+    margin-bottom: 8px;
   }
 
   /* Layout and grids */
