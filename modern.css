@@ -246,13 +246,13 @@ ul { list-style: none; }
 .makrophage { padding: 120px 0; }
 .makrophage-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; }
 .makrophage-title h2 { font-size: 2.5rem; line-height: 1.2; }
-.makrophage-title span { color: var(--teal-glow); }
-.makrophage-copy p { color: rgba(255,255,255,0.7); font-size: 1.1rem; margin-bottom: 16px; }
+.makrophage-title span { color: var(--teal); }
+.makrophage-copy p { color: #475569; font-size: 1.1rem; margin-bottom: 16px; }
 .objective-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-top: 80px; }
-.objective-grid article { padding: 32px 24px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; }
-.objective-grid span { display: block; font-size: 1.2rem; color: var(--teal-glow); margin-bottom: 16px; }
-.objective-grid h3 { font-size: 1.2rem; margin-bottom: 8px; }
-.objective-grid p { color: rgba(255,255,255,0.6); font-size: 0.95rem; }
+.objective-grid article { padding: 32px 24px; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
+.objective-grid span { display: block; font-size: 1.2rem; color: var(--teal); margin-bottom: 16px; }
+.objective-grid h3 { font-size: 1.2rem; margin-bottom: 8px; color: #0f172a; }
+.objective-grid p { color: #475569; font-size: 0.95rem; }
 
 /* ── SPECIALTIES ── */
 .specialties { padding: 120px 0; background: var(--white); }
