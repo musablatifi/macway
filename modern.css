@@ -110,21 +110,12 @@ ul { list-style: none; }
 }
 .nav-links {
   display: flex;
-  gap: 24px;
+  gap: 32px;
   font-size: 0.95rem;
-  font-weight: 500;
-  color: var(--gray);
+  font-weight: 600;
+  color: #334155;
 }
-.nav-links a:hover { color: var(--navy); }
-.btn-hcp {
-  border-color: var(--navy);
-  color: var(--navy);
-  padding: 8px 16px;
-}
-.btn-hcp:hover {
-  background: var(--navy);
-  color: var(--white);
-}
+.nav-links a:hover { color: var(--teal); }
 .nav-toggle { display: none; }
 
 /* ── HERO ── */
@@ -324,7 +315,7 @@ ul { list-style: none; }
 /* ── FOOTER ── */
 .site-footer { padding: 80px 0 40px; }
 .footer-top { display: flex; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 40px; margin-bottom: 40px; }
-.footer-logo { height: 40px; filter: brightness(0) invert(1); opacity: 0.8; }
+.footer-logo { height: 40px; }
 .footer-disclaimer { max-width: 500px; color: rgba(255,255,255,0.4); font-size: 0.85rem; }
 .footer-bottom { display: flex; justify-content: space-between; align-items: center; }
 .footer-links { display: flex; gap: 24px; font-size: 0.9rem; color: rgba(255,255,255,0.6); }
