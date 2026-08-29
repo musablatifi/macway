@@ -28,6 +28,8 @@ body {
   line-height: 1.6;
   background: var(--light);
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 img { max-width: 100%; height: auto; display: block; }
@@ -90,8 +92,7 @@ ul { list-style: none; }
 .site-header {
   position: fixed;
   top: 0; left: 0; right: 0;
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(10px);
+  background: #ffffff;
   z-index: 1000;
   border-bottom: 1px solid rgba(0,0,0,0.05);
 }
@@ -112,8 +113,9 @@ ul { list-style: none; }
   display: flex;
   gap: 32px;
   font-size: 0.95rem;
-  font-weight: 600;
-  color: #334155;
+  font-weight: 500;
+  color: #111827;
+  letter-spacing: -0.01em;
 }
 .nav-links a:hover { color: var(--teal); }
 .nav-toggle { display: none; }
