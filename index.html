@@ -13,7 +13,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   
   <!-- Modern Single-Page CSS -->
-  <link rel="stylesheet" href="modern.css">
+  <link rel="stylesheet" href="modern.css?v=11">
 </head>
 <body>
 
@@ -35,7 +35,12 @@
           <li><a href="#products">Products</a></li>
           <li><a href="#science">Science & Quality</a></li>
         </ul>
-        <a class="btn-outline btn-hcp" href="#hcp">HCP Resources <i class="fa fa-arrow-right"></i></a>
+        <div class="nav-contact-icons" style="display: flex; gap: 12px; align-items: center; margin-left: 20px;">
+          <a href="tel:04040061999" aria-label="Phone" style="display: flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 50%; border: 1px solid rgba(0,0,0,0.15); color: #02295a; text-decoration: none; transition: all 0.3s ease;" onmouseover="this.style.background='#02295a'; this.style.color='#fff';" onmouseout="this.style.background='transparent'; this.style.color='#02295a';"><i class="fa fa-phone"></i></a>
+          <a href="https://wa.me/918885434343" aria-label="WhatsApp" style="display: flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 50%; border: 1px solid rgba(0,0,0,0.15); color: #02295a; text-decoration: none; transition: all 0.3s ease;" onmouseover="this.style.background='#02295a'; this.style.color='#fff';" onmouseout="this.style.background='transparent'; this.style.color='#02295a';"><i class="fa fa-whatsapp"></i></a>
+          <a href="mailto:macway.biotech@gmail.com" aria-label="Email" style="display: flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 50%; border: 1px solid rgba(0,0,0,0.15); color: #02295a; text-decoration: none; transition: all 0.3s ease;" onmouseover="this.style.background='#02295a'; this.style.color='#fff';" onmouseout="this.style.background='transparent'; this.style.color='#02295a';"><i class="fa fa-envelope-o"></i></a>
+          <a href="#contact" aria-label="Location" style="display: flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 50%; border: 1px solid rgba(0,0,0,0.15); color: #02295a; text-decoration: none; transition: all 0.3s ease;" onmouseover="this.style.background='#02295a'; this.style.color='#fff';" onmouseout="this.style.background='transparent'; this.style.color='#02295a';"><i class="fa fa-map-marker"></i></a>
+        </div>
       </nav>
     </div>
   </header>
@@ -44,96 +49,13 @@
   <section class="hero" id="top">
     <!-- Image Slider Background -->
     <div class="hero-slider">
-      <div class="hero-slide active">
-        <img src="images/FRONT (1).webp" alt="Healthcare Solutions">
-      </div>
-      <div class="hero-slide">
-        <img src="images/FRONT (2).webp" alt="Wound Care Innovations">
-      </div>
-      <div class="hero-slide">
-        <img src="images/FRONT (3).webp" alt="Advanced Medical Care">
-      </div>
-    </div>
-    
-    <div class="hero-overlay"></div>
-
-    <div class="container hero-content-wrapper">
-      <div class="hero-copy fade-up">
-        <div class="hero-badge">
-          <i class="fa fa-map-marker"></i> Hyderabad, India · Specialty Care
-        </div>
-        <h1>Advancing the<br>science of <em>healing.</em></h1>
-        <p class="hero-intro">
-          Purpose-built pharmaceutical solutions across advanced wound management, neuro-pain and tissue repair—designed around the real clinical journey.
-        </p>
-        <div class="hero-actions">
-          <a class="btn-primary" href="#products">Explore our portfolio <i class="fa fa-arrow-right"></i></a>
-          <a class="btn-outline" href="#about">Discover Macway</a>
-        </div>
-        <div class="hero-proof">
-          <div class="proof-item">
-            <strong>Specialty-led</strong>
-            <span>Focused portfolio</span>
-          </div>
-          <div class="proof-item">
-            <strong>Continuum-based</strong>
-            <span>From preparation to repair</span>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Visual Interactive Element -->
-      <div class="hero-visual fade-up delay-2">
-        <div class="visual-glow"></div>
-        <div class="orbit orbit-one"></div>
-        <div class="orbit orbit-two"></div>
-        <div class="healing-core">
-          <span>MACWAY</span>
-          <strong>HEALING</strong>
-          <small>CONTINUUM</small>
-        </div>
-        <article class="floating-product product-one glass-card">
-          <span class="product-index">01</span>
-          <div>
-            <small>Advanced wound care</small>
-            <strong>SILCOLL-FC</strong>
-          </div>
-        </article>
-        <article class="floating-product product-two glass-card">
-          <span class="product-index">02</span>
-          <div>
-            <small>Neuro-pain care</small>
-            <strong>DNP-PG GEL</strong>
-          </div>
-        </article>
-        <article class="floating-product product-three glass-card">
-          <span class="product-index">03</span>
-          <div>
-            <small>Wound-bed prep</small>
-            <strong>ENZYDEB</strong>
-          </div>
-        </article>
-      </div>
+      <div class="hero-slide active" style="background-image: url('images/FRONT (1).webp');"></div>
+      <div class="hero-slide" style="background-image: url('images/2.jpg');"></div>
+      <div class="hero-slide" style="background-image: url('images/3.jpg');"></div>
     </div>
   </section>
 
-  <!-- ── HEALING CONTINUUM ── -->
-  <section class="continuum fade-up">
-    <div class="container">
-      <div class="continuum-header">
-        <p>The Macway healing continuum</p>
-        <ol class="continuum-steps">
-          <li><span>01</span> Prepare</li>
-          <li><span>02</span> Protect</li>
-          <li><span>03</span> Repair</li>
-          <li><span>04</span> Restore</li>
-        </ol>
-      </div>
-      <div class="continuum-image-container">
-        <img src="images/Macway_Four_Stages_Wound_Care_Cards.webp" alt="Four Stages of Wound Care" class="continuum-img" />
-      </div>
-    </div>
-  </section>
+
 
   <!-- ── ABOUT / MAKROPHAGE ── -->
   <section class="makrophage section-dark" id="about">
@@ -379,21 +301,6 @@
     </div>
   </section>
 
-  <!-- ── HCP RESOURCES ── -->
-  <section class="hcp section-dark" id="hcp">
-    <div class="container hcp-panel glass-card fade-up">
-      <div class="hcp-content">
-        <div class="section-kicker">Healthcare professionals</div>
-        <h2>Clinical information, when you need it.</h2>
-        <p>Request approved product literature, prescribing information or support from the Macway medical-information team.</p>
-      </div>
-      <div class="hcp-actions">
-        <a class="btn-primary" href="mailto:macway.biotech@gmail.com?subject=Product%20literature%20request">Request product literature <i class="fa fa-arrow-right"></i></a>
-        <a class="btn-outline" href="mailto:macway.biotech@gmail.com?subject=Medical%20information%20request">Medical information</a>
-      </div>
-    </div>
-  </section>
-
   <!-- ── CONTACT ── -->
   <section class="contact" id="contact">
     <div class="container contact-container fade-up">
@@ -403,37 +310,34 @@
       </div>
       <div class="contact-details">
         <div class="contact-block">
-          <small>Corporate office</small>
-          <p>Macway House, Raghavendra Nagar,<br>Nacharam, Hyderabad, Telangana 500076</p>
+          <small>Registered Office</small>
+          <p>MACWAYHOUSE, HNO.4-7-11/9,<br>Raghavendra Nagar, Nacharam,<br>Hyderabad, Telangana 500076</p>
+        </div>
+        <div class="contact-block">
+          <small>Phone & Mobile</small>
+          <p>
+            <a href="tel:04040061999" style="color:var(--text-main);">040-40061999</a><br>
+            <a href="tel:+918885434343" style="color:var(--text-main);">+91 8885434343</a>
+          </p>
         </div>
         <div class="contact-block">
           <small>Email</small>
           <a href="mailto:macway.biotech@gmail.com">macway.biotech@gmail.com</a>
-        </div>
-        <div class="contact-block">
-          <small>Web</small>
-          <a href="https://www.macway.in">www.macway.in</a>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ── FOOTER ── -->
-  <footer class="site-footer section-dark">
+  <footer class="site-footer section-dark" style="padding-top: 40px; padding-bottom: 40px;">
     <div class="container">
-      <div class="footer-top">
+      <div class="footer-modern-layout" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem; text-align: left;">
         <div class="footer-brand">
-          <img src="images/MACWAY LOGO.svg" alt="Macway Biotech Logo" class="footer-logo" />
+          <img src="images/MACWAY LOGO.svg?v=2" alt="Macway Biotech Logo" class="footer-logo" style="height: 35px; opacity: 0.7; transition: opacity 0.3s ease; filter: grayscale(1) brightness(2);" onmouseover="this.style.opacity='1'; this.style.filter='none';" onmouseout="this.style.opacity='0.7'; this.style.filter='grayscale(1) brightness(2)';" />
         </div>
-        <p class="footer-disclaimer">Product information on this website is intended for Registered Medical Practitioners / Hospital use only and must be read with approved prescribing information.</p>
-      </div>
-      <div class="footer-bottom">
-        <div class="footer-links">
-          <a href="#hcp">HCP Resources</a>
-          <a href="#science">Compliance</a>
-          <a href="#contact">Contact</a>
+        <div class="footer-credits">
+          <small style="color: var(--text-light); font-size: 0.85rem; opacity: 0.6;">&copy; 2026 Macway Biotech Private Limited. All rights reserved. Designed by <strong style="color: var(--text-main);">Musab Latifi</strong>.</small>
         </div>
-        <small>&copy; 2026 Macway Biotech Private Limited. All rights reserved. Designed by <strong>Musab Latifi</strong>.</small>
       </div>
     </div>
   </footer>

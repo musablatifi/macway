@@ -58,16 +58,54 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  /* ── Hero Slider (Fade Transition) ── */
+  /* ── Hero Carousel ── */
   const slides = document.querySelectorAll('.hero-slide');
   let currentSlide = 0;
+  let slideInterval;
   
+  function updateSlider() {
+    slides.forEach(s => s.classList.remove('active', 'prev', 'next'));
+    slides[currentSlide].classList.add('active');
+    
+    if (slides.length > 1) {
+      const prevSlide = (currentSlide - 1 + slides.length) % slides.length;
+      const nextSlide = (currentSlide + 1) % slides.length;
+      slides[prevSlide].classList.add('prev');
+      if (slides.length > 2) {
+        slides[nextSlide].classList.add('next');
+      }
+    }
+  }
+
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    updateSlider();
+  }
+
+  function prevSlide() {
+    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+    updateSlider();
+  }
+
   if (slides.length > 0) {
-    setInterval(() => {
-      slides[currentSlide].classList.remove('active');
-      currentSlide = (currentSlide + 1) % slides.length;
-      slides[currentSlide].classList.add('active');
-    }, 6000);
+    updateSlider();
+    
+    slides.forEach((slide, index) => {
+      slide.addEventListener('click', () => {
+        if (slide.classList.contains('prev') || slide.classList.contains('next')) {
+          currentSlide = index;
+          updateSlider();
+          resetInterval();
+        }
+      });
+    });
+
+    function resetInterval() {
+      clearInterval(slideInterval);
+      slideInterval = setInterval(nextSlide, 5000);
+    }
+    
+    resetInterval();
   }
 
   /* ── Scroll Animations (Fade Up) ── */
