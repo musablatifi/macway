@@ -1,120 +1,131 @@
 /* ====================================================
-   Macway Biotech — Shared UI Script (Vanilla JS)
+   Macway Biotech — Single-Page JS
    ==================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  /* ── Mobile nav toggle ── */
+  /* ── Mobile Nav Toggle ── */
   const navToggle = document.querySelector('.nav-toggle');
-  const navLinks  = document.querySelector('.nav-links');
-
-  if (navToggle && navLinks) {
+  const desktopNav = document.querySelector('.desktop-nav');
+  
+  if (navToggle && desktopNav) {
     navToggle.addEventListener('click', () => {
-      navToggle.classList.toggle('open');
-      navLinks.classList.toggle('open');
-    });
-
-    // Handle dropdown on mobile via tap
-    document.querySelectorAll('.nav-links li').forEach(li => {
-      const dropdown = li.querySelector('.nav-dropdown');
-      if (dropdown) {
-        const link = li.querySelector('a');
-        link.addEventListener('click', (e) => {
-          if (window.innerWidth <= 991) {
-            e.preventDefault();
-            li.classList.toggle('open');
-          }
-        });
+      // Very basic mobile menu toggle (can be enhanced with CSS classes later)
+      if (desktopNav.style.display === 'flex') {
+        desktopNav.style.display = 'none';
+      } else {
+        desktopNav.style.display = 'flex';
+        desktopNav.style.flexDirection = 'column';
+        desktopNav.style.position = 'absolute';
+        desktopNav.style.top = '72px';
+        desktopNav.style.left = '0';
+        desktopNav.style.right = '0';
+        desktopNav.style.background = '#ffffff';
+        desktopNav.style.padding = '24px';
+        desktopNav.style.boxShadow = '0 10px 20px rgba(0,0,0,0.1)';
       }
     });
-  }
 
-  /* ── Hero Slider ── */
-  const slides = document.querySelectorAll('.hero-slide');
-  const dots   = document.querySelectorAll('.hero-dot');
-  let current  = 0;
-  let timer;
-
-  function showSlide(n) {
-    slides.forEach((s, i) => s.classList.toggle('active', i === n));
-    dots.forEach((d, i)  => d.classList.toggle('active', i === n));
-    current = n;
-  }
-
-  function nextSlide() {
-    showSlide((current + 1) % slides.length);
-  }
-
-  function startTimer() {
-    timer = setInterval(nextSlide, 5000);
-  }
-
-  if (slides.length > 0) {
-    showSlide(0);
-    startTimer();
-
-    dots.forEach((dot, i) => {
-      dot.addEventListener('click', () => {
-        clearInterval(timer);
-        showSlide(i);
-        startTimer();
+    // Close mobile menu on link click
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth <= 768) {
+          desktopNav.style.display = 'none';
+        }
       });
     });
   }
 
-  /* ── Back to Top ── */
-  const backTop = document.querySelector('.back-top');
-  if (backTop) {
-    window.addEventListener('scroll', () => {
-      backTop.classList.toggle('visible', window.scrollY > 400);
+  /* ── Smooth Scrolling for Anchor Links ── */
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const targetId = this.getAttribute('href');
+      if (targetId === '#') return;
+      
+      const targetElement = document.querySelector(targetId);
+      if (targetElement) {
+        // Offset for the fixed header
+        const headerOffset = 72;
+        const elementPosition = targetElement.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+  
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+      }
     });
-    backTop.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
+  });
+
+  /* ── Hero Carousel ── */
+  const slides = document.querySelectorAll('.hero-slide');
+  let currentSlide = 0;
+  let slideInterval;
+  
+  function updateSlider() {
+    slides.forEach(s => s.classList.remove('active', 'prev', 'next'));
+    slides[currentSlide].classList.add('active');
+    
+    if (slides.length > 1) {
+      const prevSlide = (currentSlide - 1 + slides.length) % slides.length;
+      const nextSlide = (currentSlide + 1) % slides.length;
+      slides[prevSlide].classList.add('prev');
+      if (slides.length > 2) {
+        slides[nextSlide].classList.add('next');
+      }
+    }
   }
 
-  /* ── Scroll animations ── */
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    updateSlider();
+  }
+
+  function prevSlide() {
+    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+    updateSlider();
+  }
+
+  if (slides.length > 0) {
+    updateSlider();
+    
+    slides.forEach((slide, index) => {
+      slide.addEventListener('click', () => {
+        if (slide.classList.contains('prev') || slide.classList.contains('next')) {
+          currentSlide = index;
+          updateSlider();
+          resetInterval();
+        }
+      });
+    });
+
+    function resetInterval() {
+      clearInterval(slideInterval);
+      slideInterval = setInterval(nextSlide, 5000);
+    }
+    
+    resetInterval();
+  }
+
+  /* ── Scroll Animations (Fade Up) ── */
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: "0px 0px -50px 0px"
+  };
+
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('in-view');
+        // Optional: Stop observing once animated in
+        // observer.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.1 });
+  }, observerOptions);
 
-  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
-
-  /* ── Active nav link ── */
-  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-  document.querySelectorAll('.nav-links > li > a').forEach(link => {
-    const href = link.getAttribute('href');
-    if (href === currentPage) {
-      link.closest('li').classList.add('active');
-    }
+  document.querySelectorAll('.fade-up').forEach(el => {
+    observer.observe(el);
   });
-
-  /* ── Smooth counter animation ── */
-  function animateCounter(el) {
-    const target = parseInt(el.dataset.target || el.textContent, 10);
-    if (isNaN(target)) return;
-    let current = 0;
-    const step = Math.ceil(target / 60);
-    const interval = setInterval(() => {
-      current = Math.min(current + step, target);
-      el.textContent = current + (el.dataset.suffix || '');
-      if (current >= target) clearInterval(interval);
-    }, 16);
-  }
-
-  const statObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.querySelectorAll('.stat-number').forEach(animateCounter);
-        statObserver.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.5 });
-
-  document.querySelectorAll('.stats-bar').forEach(el => statObserver.observe(el));
 
 });

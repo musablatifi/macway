@@ -1,398 +1,347 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Macway Biotech — Advanced Wound Care & Neuro-Psychiatry Solutions</title>
-  <meta name="description" content="Macway Biotech Private Limited supports healthcare professionals with advanced wound care, neuro-psychiatry and pharmaceutical products. Based in Hyderabad, India.">
-
-  <!-- Font Awesome 4 (already present) -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Macway Biotech — Specialty Care</title>
+  <meta name="description" content="Macway Biotech specialty solutions across advanced wound management, neuro-pain and tissue repair." />
+  
+  <!-- FontAwesome & Google Fonts -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <!-- Modern Design System -->
-  <link rel="stylesheet" href="modern.css">
-  <!-- Favicon -->
-  <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Modern Single-Page CSS -->
+  <link rel="stylesheet" href="modern.css?v=12">
 </head>
 <body>
 
-  <!-- ── TOP BAR ── -->
-  <div class="top-bar">
+  <!-- ── HEADER ── -->
+  <header class="site-header">
     <div class="container">
-      <div class="top-bar-left">
-        <a href="mailto:macway.biotech@gmail.com">
-          <i class="fa fa-envelope"></i> macway.biotech@gmail.com
-        </a>
-        <a href="tel:+918885434343">
-          <i class="fa fa-phone"></i> +91 8885434343
-        </a>
-      </div>
-      <div class="top-bar-right">
-        <a href="#" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
-        <a href="#" aria-label="Twitter"><i class="fa fa-twitter"></i></a>
-        <a href="#" aria-label="LinkedIn"><i class="fa fa-linkedin"></i></a>
-        <a href="#" aria-label="YouTube"><i class="fa fa-youtube-play"></i></a>
-      </div>
-    </div>
-  </div>
-
-    <!-- ── NAVBAR ── -->
-  <nav class="navbar" id="main-nav">
-    <div class="container">
-      <a href="index.html" class="navbar-brand">
-        <img src="images/logo.jpg" alt="Macway Biotech Logo">
+      <a class="brand" href="#top" aria-label="Macway Biotech home">
+        <img src="images/MACWAY LOGO.svg" alt="Macway Biotech Logo" class="brand-logo" />
       </a>
-
-      <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
+      
+      <button class="nav-toggle" aria-label="Toggle Navigation">
         <span></span><span></span><span></span>
       </button>
 
-      <ul class="nav-links" id="nav-links">
-        <li class="active"><a href="index.html">Home</a></li>
-        <li class=""><a href="about.html">About Us</a></li>
-        <li class="">
-          <a href="#">Product Portfolio <i class="fa fa-caret-down" style="margin-left: 4px;"></i></a>
-          <ul class="nav-dropdown">
-            <li><a href="neuro.html">Neuro Care</a></li>
-            <li><a href="physhiatry.html">Psychiatry</a></li>
-            <li><a href="woundcare.html">Wound Care</a></li>
-          </ul>
-        </li>
-        <li class=""><a href="news.html">News &amp; Updates</a></li>
-        <li class=""><a href="get.html" class="nav-cta">Get in Touch</a></li>
-      </ul>
-    </div>
-  </nav>
-
-  <!-- ── HERO SLIDER ── -->
-  <section class="hero" id="home">
-    <!-- Slides -->
-    <div class="hero-slide active">
-      <img src="images/slide_3.jpg" alt="Macway Biotech — Healthcare Solutions">
-    </div>
-    <div class="hero-slide">
-      <img src="images/slide_1.jpg" alt="Macway Biotech — Wound Care">
-    </div>
-    <div class="hero-slide">
-      <img src="images/slide_2.jpg" alt="Macway Biotech — Neuro Psychiatry">
-    </div>
-
-    <div class="hero-overlay"></div>
-
-    <div class="container">
-      <div class="hero-content">
-        <div class="hero-badge">
-          <i class="fa fa-heartbeat"></i> Trusted Healthcare Partner
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#specialties">Specialties</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#science">Science & Quality</a></li>
+        </ul>
+        <div class="nav-contact-icons" style="display: flex; gap: 12px; align-items: center; margin-left: 20px;">
+          <a href="tel:04040061999" aria-label="Phone" style="display: flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 50%; border: 1px solid rgba(0,0,0,0.15); color: #02295a; text-decoration: none; transition: all 0.3s ease;" onmouseover="this.style.background='#02295a'; this.style.color='#fff';" onmouseout="this.style.background='transparent'; this.style.color='#02295a';"><i class="fa fa-phone"></i></a>
+          <a href="https://wa.me/918885434343" aria-label="WhatsApp" style="display: flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 50%; border: 1px solid rgba(0,0,0,0.15); color: #02295a; text-decoration: none; transition: all 0.3s ease;" onmouseover="this.style.background='#02295a'; this.style.color='#fff';" onmouseout="this.style.background='transparent'; this.style.color='#02295a';"><i class="fa fa-whatsapp"></i></a>
+          <a href="mailto:macway.biotech@gmail.com" aria-label="Email" style="display: flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 50%; border: 1px solid rgba(0,0,0,0.15); color: #02295a; text-decoration: none; transition: all 0.3s ease;" onmouseover="this.style.background='#02295a'; this.style.color='#fff';" onmouseout="this.style.background='transparent'; this.style.color='#02295a';"><i class="fa fa-envelope-o"></i></a>
+          <a href="#contact" aria-label="Location" style="display: flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 50%; border: 1px solid rgba(0,0,0,0.15); color: #02295a; text-decoration: none; transition: all 0.3s ease;" onmouseover="this.style.background='#02295a'; this.style.color='#fff';" onmouseout="this.style.background='transparent'; this.style.color='#02295a';"><i class="fa fa-map-marker"></i></a>
         </div>
-        <h1>We believe every relation starts with <em>Trust</em></h1>
-        <p>Macway Biotech supports healthcare professionals with advanced wound care, neuro-psychiatry and pharmaceutical products — improving patient lives every day.</p>
-        <div class="hero-actions">
-          <a href="about.html" class="btn-primary">
-            <i class="fa fa-info-circle"></i> About Us
-          </a>
-          <a href="get.html" class="btn-outline">
-            <i class="fa fa-envelope"></i> Get in Touch
-          </a>
-        </div>
-      </div>
+      </nav>
     </div>
+  </header>
 
-    <div class="hero-dots">
-      <button class="hero-dot active" aria-label="Slide 1"></button>
-      <button class="hero-dot" aria-label="Slide 2"></button>
-      <button class="hero-dot" aria-label="Slide 3"></button>
+  <!-- ── HERO SECTION ── -->
+  <section class="hero" id="top">
+    <!-- Image Slider Background -->
+    <div class="hero-slider">
+      <div class="hero-slide active" style="background-image: url('images/FRONT (1).webp');"></div>
+      <div class="hero-slide" style="background-image: url('images/2.jpg');"></div>
+      <div class="hero-slide" style="background-image: url('images/3.jpg');"></div>
     </div>
   </section>
 
-  <!-- ── WELCOME / ABOUT ── -->
-  <section class="section" id="about">
+
+
+  <!-- ── ABOUT / MAKROPHAGE ── -->
+  <section class="makrophage section-dark" id="about">
     <div class="container">
-      <div class="welcome-grid">
-        <div class="welcome-img fade-up">
-          <img src="images/about.jpg" alt="Macway Biotech Team">
-          <div class="welcome-badge">Est. Hyderabad, India</div>
+      <div class="section-kicker fade-up">About Macway Biotech</div>
+      <div class="makrophage-grid fade-up">
+        <div class="makrophage-title">
+          <h2>Healing with Science.<br><span>Advancing with Purpose.</span></h2>
         </div>
-        <div class="welcome-text fade-up">
-          <div class="section-tag">Who We Are</div>
-          <h2>Welcome to <span>Macway Biotech</span> Private Limited</h2>
-          <p>Macway Biotech supports healthcare professionals in their daily efforts to improve the lives of their patients. Based in Hyderabad, specialised in development and sales, we offer a comprehensive range of products from initial wound bed preparation through to full wound closure.</p>
-          <p>With good exposure and experience in the Neuro-Psychiatry industry, we believe our expertise can be put to use in addressing the difficulties encountered in the management of treatment.</p>
-          <div class="welcome-features">
-            <div class="welcome-feature">CE Mark Certified</div>
-            <div class="welcome-feature">ISO 9001-2008</div>
-            <div class="welcome-feature">ISO 13485-AC-2007</div>
-            <div class="welcome-feature">WHO-GMP Certified</div>
-          </div>
-          <a href="about.html" class="welcome-link">Learn More About Us →</a>
+        <div class="makrophage-copy">
+          <p>Macway Biotech Private Limited is a Hyderabad-based specialty healthcare company dedicated to supporting healthcare professionals with reliable, clinically relevant and patient-focused solutions.</p>
+          <p>Our portfolio spans the complete healing journey—from wound-bed preparation and infection management to tissue repair and wound closure. We also bring focused expertise to neuropathic pain, neuropsychiatry, reconstruction and fixation, sports medicine, trauma and extremity care.</p>
         </div>
+      </div>
+      
+      <div class="makrophage-grid fade-up delay-1" style="margin-top: 60px;">
+        <div class="makrophage-title">
+          <h2 style="font-size: 2rem;">Focused on<br><span>Advanced Wound Management</span></h2>
+        </div>
+        <div class="makrophage-copy">
+          <p>Through <strong>Makrophage</strong>, our specialised wound-management division, we provide advanced and active wound-care solutions designed to address complex clinical needs across India.</p>
+          <p>By combining scientific understanding with practical clinical insight, we aim to make innovative wound-care technologies more accessible to healthcare professionals and help enable better outcomes for patients.</p>
+        </div>
+      </div>
+
+      <div class="objective-grid fade-up delay-2">
+        <article class="glass-card">
+          <span>01</span>
+          <h3>Prepare</h3>
+          <p>Support a cleaner, clinically ready wound bed.</p>
+        </article>
+        <article class="glass-card">
+          <span>02</span>
+          <h3>Protect</h3>
+          <p>Help address infection risk and wound complexity.</p>
+        </article>
+        <article class="glass-card">
+          <span>03</span>
+          <h3>Repair</h3>
+          <p>Support tissue regeneration and collagen synthesis.</p>
+        </article>
+        <article class="glass-card">
+          <span>04</span>
+          <h3>Restore</h3>
+          <p>Extend care into scar quality and functional recovery.</p>
+        </article>
       </div>
     </div>
   </section>
 
-  <!-- ── STATS ── -->
-  <div class="stats-bar">
+  <!-- ── SPECIALTIES ── -->
+  <section class="specialties" id="specialties">
     <div class="container">
-      <div class="stats-grid">
-        <div class="stat-item fade-up">
-          <div class="stat-number" data-target="500" data-suffix="+">0</div>
-          <div class="stat-label">Products Delivered</div>
+      <div class="section-heading fade-up">
+        <div>
+          <div class="section-kicker">Where we focus</div>
+          <h2>Specialty care, built with purpose.</h2>
         </div>
-        <div class="stat-item fade-up">
-          <div class="stat-number" data-target="3" data-suffix="">0</div>
-          <div class="stat-label">Product Divisions</div>
-        </div>
-        <div class="stat-item fade-up">
-          <div class="stat-number" data-target="10" data-suffix="+">0</div>
-          <div class="stat-label">Years of Trust</div>
-        </div>
-        <div class="stat-item fade-up">
-          <div class="stat-number" data-target="4" data-suffix="">0</div>
-          <div class="stat-label">Certifications</div>
-        </div>
+        <p>Distinct therapy areas. One shared commitment: clearer clinical value and better-supported patient outcomes.</p>
       </div>
-    </div>
-  </div>
+      
+      <div class="specialty-grid fade-up delay-1">
+        
+        <article class="specialty-featured glass-card">
+          <img src="images/Macway_Advanced_Wound_Management_Website_Card.webp" alt="Advanced Wound Management" class="specialty-bg-img">
+          <div class="specialty-content">
+            <span class="specialty-number">01</span>
+            <div class="specialty-text">
+              <small>Signature expertise</small>
+              <h3>Advanced Wound Management</h3>
+              <p>Integrated solutions across preparation, protection, tissue repair, scar care and recovery.</p>
+            </div>
+          </div>
+        </article>
 
-  <!-- ── PRODUCT PORTFOLIO ── -->
-  <section class="section section-alt" id="products">
-    <div class="container">
-      <div class="section-header fade-up">
-        <div class="section-tag">Our Products</div>
-        <h2>Product Portfolio</h2>
-        <p>Discover our comprehensive range of pharmaceutical and wound care products designed for healthcare professionals.</p>
-        <div class="section-divider"></div>
-      </div>
+        <article class="specialty-card glass-card">
+          <img src="images/Macway_Neuro_Pain_Neuropathy_Website_Card.webp" alt="Neuro-Pain" class="specialty-bg-img">
+          <div class="specialty-content">
+            <span class="specialty-number">02</span>
+            <h3>Neuro-Pain & Neuropathy</h3>
+            <p>Targeted local and systemic support for complex pain pathways.</p>
+          </div>
+        </article>
 
-      <div class="products-grid">
-        <!-- Wound Care -->
-        <div class="product-card fade-up">
-          <div class="product-card-img">
-            <img src="images/blog_img1.png" alt="Silcoll">
-            <div class="product-card-overlay"><span><i class="fa fa-eye"></i> View Product</span></div>
+        <article class="specialty-card glass-card">
+          <img src="images/Macway_Neuropsychiatry_Website_Card.webp" alt="Neuropsychiatry" class="specialty-bg-img">
+          <div class="specialty-content">
+            <span class="specialty-number">03</span>
+            <h3>Neuropsychiatry</h3>
+            <p>Focused therapies supporting continuity of neuropsychiatric care.</p>
           </div>
-          <div class="product-card-body">
-            <div class="product-category-tag">Wound Care</div>
-            <h3>Silcoll</h3>
-            <p>Pharmaceutical Wound Care</p>
-          </div>
-        </div>
+        </article>
 
-        <div class="product-card fade-up">
-          <div class="product-card-img">
-            <img src="images/blog_img2.png" alt="Silcoll">
-            <div class="product-card-overlay"><span><i class="fa fa-eye"></i> View Product</span></div>
+        <article class="specialty-card glass-card">
+          <img src="images/Macway_Reconstruction_Fixation_Trauma_Website_Card.webp" alt="Reconstruction" class="specialty-bg-img">
+          <div class="specialty-content">
+            <span class="specialty-number">04</span>
+            <h3>Reconstruction & Fixation</h3>
+            <p>Solutions aligned to tissue recovery and reconstructive practice.</p>
           </div>
-          <div class="product-card-body">
-            <div class="product-category-tag">Wound Care</div>
-            <h3>Silcoll</h3>
-            <p>Pharmaceutical Wound Care</p>
-          </div>
-        </div>
+        </article>
 
-        <div class="product-card fade-up">
-          <div class="product-card-img">
-            <img src="images/blog_img3.png" alt="Keydep">
-            <div class="product-card-overlay"><span><i class="fa fa-eye"></i> View Product</span></div>
-          </div>
-          <div class="product-card-body">
-            <div class="product-category-tag">Wound Care</div>
-            <h3>Keydep</h3>
-            <p>Pharmaceutical Care</p>
-          </div>
-        </div>
-
-        <div class="product-card fade-up">
-          <div class="product-card-img">
-            <img src="images/blog_img4.png" alt="Keydep">
-            <div class="product-card-overlay"><span><i class="fa fa-eye"></i> View Product</span></div>
-          </div>
-          <div class="product-card-body">
-            <div class="product-category-tag">Wound Care</div>
-            <h3>Keydep</h3>
-            <p>Pharmaceutical Care</p>
-          </div>
-        </div>
-
-        <div class="product-card fade-up">
-          <div class="product-card-img">
-            <img src="images/blog_img5.png" alt="Enzy Deb">
-            <div class="product-card-overlay"><span><i class="fa fa-eye"></i> View Product</span></div>
-          </div>
-          <div class="product-card-body">
-            <div class="product-category-tag">Wound Care</div>
-            <h3>Enzy Deb</h3>
-            <p>Pharmaceutical Care</p>
-          </div>
-        </div>
-
-        <div class="product-card fade-up">
-          <div class="product-card-img">
-            <img src="images/blog_img6.png" alt="Enzy Deb">
-            <div class="product-card-overlay"><span><i class="fa fa-eye"></i> View Product</span></div>
-          </div>
-          <div class="product-card-body">
-            <div class="product-category-tag">Wound Care</div>
-            <h3>Enzy Deb</h3>
-            <p>Pharmaceutical Care</p>
-          </div>
-        </div>
-
-        <div class="product-card fade-up">
-          <div class="product-card-img">
-            <img src="images/blog_img7.png" alt="Rispomac">
-            <div class="product-card-overlay"><span><i class="fa fa-eye"></i> View Product</span></div>
-          </div>
-          <div class="product-card-body">
-            <div class="product-category-tag">Neuro-Psy</div>
-            <h3>Rispomac</h3>
-            <p>Pharmaceutical Care</p>
-          </div>
-        </div>
-
-        <div class="product-card fade-up">
-          <div class="product-card-img">
-            <img src="images/blog_img8.png" alt="Oladott">
-            <div class="product-card-overlay"><span><i class="fa fa-eye"></i> View Product</span></div>
-          </div>
-          <div class="product-card-body">
-            <div class="product-category-tag">Neuro-Psy</div>
-            <h3>Oladott</h3>
-            <p>Pharmaceutical Care</p>
-          </div>
-        </div>
-
-        <div class="product-card fade-up">
-          <div class="product-card-img">
-            <img src="images/blog_img9.png" alt="Key-Bact">
-            <div class="product-card-overlay"><span><i class="fa fa-eye"></i> View Product</span></div>
-          </div>
-          <div class="product-card-body">
-            <div class="product-category-tag">Neuro-Psy</div>
-            <h3>Key-Bact</h3>
-            <p>Pharmaceutical Care</p>
-          </div>
-        </div>
-
-        <div class="product-card fade-up">
-          <div class="product-card-img">
-            <img src="images/blog_img10.png" alt="Key-Bact">
-            <div class="product-card-overlay"><span><i class="fa fa-eye"></i> View Product</span></div>
-          </div>
-          <div class="product-card-body">
-            <div class="product-category-tag">Neuro-Psy</div>
-            <h3>Key-Bact</h3>
-            <p>Pharmaceutical Care</p>
-          </div>
-        </div>
-
-        <div class="product-card fade-up">
-          <div class="product-card-img">
-            <img src="images/blog_img11.png" alt="Clozium">
-            <div class="product-card-overlay"><span><i class="fa fa-eye"></i> View Product</span></div>
-          </div>
-          <div class="product-card-body">
-            <div class="product-category-tag">Neuro-Psy</div>
-            <h3>Clozium</h3>
-            <p>Pharmaceutical Care</p>
-          </div>
-        </div>
-
-        <div class="product-card fade-up">
-          <div class="product-card-img">
-            <img src="images/blog_img11b.png" alt="Makrophage">
-            <div class="product-card-overlay"><span><i class="fa fa-eye"></i> View Product</span></div>
-          </div>
-          <div class="product-card-body">
-            <div class="product-category-tag">Wound Care</div>
-            <h3>Makrophage Series</h3>
-            <p>Advanced Wound Management</p>
-          </div>
-        </div>
-      </div>
-
-      <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; margin-top: 40px;">
-        <a href="woundcare.html" class="btn-primary">
-          <i class="fa fa-bandage"></i> Wound Care Range
-        </a>
-        <a href="neuro.html" class="btn-primary">
-          <i class="fa fa-stethoscope"></i> Neuro-Psy Range
-        </a>
       </div>
     </div>
   </section>
 
-  <!-- ── CAREER BANNER ── -->
-  <div class="career-banner">
+  <!-- ── PRODUCTS ── -->
+  <section class="products section-dark" id="products">
     <div class="container">
-      <div class="career-inner">
-        <div class="career-icon">
-          <img src="images/booking.png" alt="Career">
+      <div class="section-heading products-heading fade-up">
+        <div>
+          <div class="section-kicker">Selected portfolio</div>
+          <h2>Designed around clinical objectives.</h2>
         </div>
-        <div class="career-text">
-          <h3>Career Opportunities</h3>
-          <p>Macway Biotech launched a division <strong style="color:#0fe8c8">Makrophage</strong> in India with focus on scientific innovation to the art of wound management. Join our growing team.</p>
+      </div>
+      
+      <div class="product-grid fade-up delay-1">
+        <article class="product-card glass-card product-card-featured">
+          <div class="product-stage">
+            <span class="stage-label">Wound repair</span>
+            <div class="carton-mockup">
+              <small>NANO SILVER · COLLAGEN · VITAMIN C</small>
+              <strong>SILCOLL<span>-FC</span></strong>
+              <em>Gel</em>
+            </div>
+          </div>
+          <div class="product-info">
+            <div>
+              <small>Advanced wound care</small>
+              <h3>SILCOLL-FC</h3>
+              <p>Nano Silver + Collagen + Vitamin C Gel</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card glass-card">
+          <div class="product-stage">
+            <span class="stage-label">Neuro-pain</span>
+            <div class="carton-mockup">
+              <small>TRIPLE ACTION TOPICAL THERAPY</small>
+              <strong>DNP-PG <span>GEL</span></strong>
+              <em>Targeted relief</em>
+            </div>
+          </div>
+          <div class="product-info">
+            <div>
+              <small>Localized neuropathic pain</small>
+              <h3>DNP-PG Gel</h3>
+              <p>Pregabalin 8% + L-Arginine 5% + Menthol 5%</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card glass-card">
+          <div class="product-stage">
+            <span class="stage-label">Wound-bed preparation</span>
+            <div class="carton-mockup">
+              <small>PAPAIN · UREA</small>
+              <strong>ENZY<span>DEB</span></strong>
+              <em>Debriding Ointment</em>
+            </div>
+          </div>
+          <div class="product-info">
+            <div>
+              <small>Precision debridement</small>
+              <h3>EnzyDeb</h3>
+              <p>Papain–Urea Debriding Ointment</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card glass-card">
+          <div class="product-stage">
+            <span class="stage-label">Scar care</span>
+            <div class="carton-mockup">
+              <small>ADVANCED SCAR REMODELLING</small>
+              <strong>SCATRIX</strong>
+              <em>Topical Gel</em>
+            </div>
+          </div>
+          <div class="product-info">
+            <div>
+              <small>Scar remodelling support</small>
+              <h3>Scatrix</h3>
+              <p>Extract Cepae + Heparin Sodium + Allantoin Gel</p>
+            </div>
+          </div>
+        </article>
+      </div>
+      
+      <div class="portfolio-list fade-up delay-2">
+        <span>Also across the Macway portfolio:</span>
+        <div class="portfolio-tags">
+          <span class="glass-tag">DNP Gel</span>
+          <span class="glass-tag">Lympomac</span>
+          <span class="glass-tag">Wunexa</span>
+          <span class="glass-tag">Benfodiet</span>
+          <span class="glass-tag">Dulohush-20</span>
+          <span class="glass-tag">Ultramac</span>
+          <span class="glass-tag">Oladott</span>
+          <span class="glass-tag">Divarest</span>
         </div>
-        <a href="get.html" class="btn-primary" style="flex-shrink:0;">
-          <i class="fa fa-briefcase"></i> Get in Touch
-        </a>
       </div>
     </div>
-  </div>
+  </section>
+
+  <!-- ── SCIENCE & QUALITY ── -->
+  <section class="science" id="science">
+    <div class="container science-container fade-up">
+      <div class="science-art">
+        <div class="science-orb"><span></span><span></span><span></span><span></span></div>
+        <p>Evidence · Quality · Responsibility</p>
+      </div>
+      <div class="science-copy">
+        <div class="section-kicker">The Macway standard</div>
+        <h2>Science-led.<br><span>Responsibly communicated.</span></h2>
+        <p>Quality, patient safety and responsible business practices remain central to everything we do. Where applicable, products within our portfolio are supported by recognised regulatory approvals and quality systems.</p>
+        
+        <div class="science-points">
+          <div class="science-point">
+            <span>01</span>
+            <div>
+              <strong>Integrity and Transparency</strong>
+              <small>We conduct our business with honesty, accountability and transparency.</small>
+            </div>
+          </div>
+          <div class="science-point">
+            <span>02</span>
+            <div>
+              <strong>Quality</strong>
+              <small>We integrate quality into our products, services and processes.</small>
+            </div>
+          </div>
+          <div class="science-point">
+            <span>03</span>
+            <div>
+              <strong>Innovation and Excellence</strong>
+              <small>We encourage scientific thinking, continuous improvement and purposeful innovation.</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CONTACT ── -->
+  <section class="contact" id="contact">
+    <div class="container contact-container fade-up">
+      <div class="contact-header">
+        <div class="section-kicker">Connect with Macway</div>
+        <h2>Let’s advance care,<br><span>together.</span></h2>
+      </div>
+      <div class="contact-details">
+        <div class="contact-block">
+          <small>Registered Office</small>
+          <p>MACWAYHOUSE, HNO.4-7-11/9,<br>Raghavendra Nagar, Nacharam,<br>Hyderabad, Telangana 500076</p>
+        </div>
+        <div class="contact-block">
+          <small>Phone & Mobile</small>
+          <p>
+            <a href="tel:04040061999" style="color:var(--text-main);">040-40061999</a><br>
+            <a href="tel:+918885434343" style="color:var(--text-main);">+91 8885434343</a>
+          </p>
+        </div>
+        <div class="contact-block">
+          <small>Email</small>
+          <a href="mailto:macway.biotech@gmail.com">macway.biotech@gmail.com</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- ── FOOTER ── -->
-  <footer class="footer-top">
+  <footer class="site-footer section-dark" style="padding-top: 40px; padding-bottom: 40px;">
     <div class="container">
-      <div class="footer-grid">
-        <div class="footer-col">
-          <h4><i class="fa fa-map-marker"></i> Address</h4>
-          <p>MACWAYHOUSE, HNO.4-7-11/9<br>
-          Raghavendra Nagar, Nacharam<br>
-          Hyderabad, India.</p>
+      <div class="footer-modern-layout" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem; text-align: left;">
+        <div class="footer-brand">
+          <img src="images/MACWAY LOGO.svg?v=2" alt="Macway Biotech Logo" class="footer-logo" style="height: 35px; opacity: 0.7; transition: opacity 0.3s ease; filter: grayscale(1) brightness(2);" onmouseover="this.style.opacity='1'; this.style.filter='none';" onmouseout="this.style.opacity='0.7'; this.style.filter='grayscale(1) brightness(2)';" />
         </div>
-        <div class="footer-col">
-          <h4><i class="fa fa-phone"></i> Contact</h4>
-          <p>Phone: <a href="tel:04040061999">040-40061999</a><br>
-          Mobile: <a href="tel:+918885434343">+91 8885434343</a><br>
-          Email: <a href="mailto:macway.biotech@gmail.com">macway.biotech@gmail.com</a></p>
-          <p style="margin-top:8px; font-size:.82rem; opacity:.6;">Mon–Sat, 9:00 AM – 7:00 PM</p>
-        </div>
-        <div class="footer-col">
-          <h4><i class="fa fa-link"></i> Quick Links</h4>
-          <nav class="footer-nav-links">
-            <a href="index.html">Home</a>
-            <a href="about.html">About Us</a>
-            <a href="neuro.html">Neuro Care</a>
-            <a href="physhiatry.html">Psychiatry</a>
-            <a href="woundcare.html">Wound Care</a>
-            <a href="news.html">News &amp; Updates</a>
-            <a href="get.html">Get in Touch</a>
-          </nav>
+        <div class="footer-credits">
+          <small style="color: var(--text-light); font-size: 0.85rem; opacity: 0.6;">&copy; 2026 Macway Biotech Private Limited. All rights reserved. Designed by <strong style="color: var(--text-main);">Musab Latifi</strong>.</small>
         </div>
       </div>
     </div>
   </footer>
 
-  <div class="footer-bottom">
-    <div class="container">
-      <p class="footer-copy">
-        &copy; 2015 Macway Biotech Private Limited. All rights reserved. Designed by <strong>Musab Latifi</strong>.
-      </p>
-      <div class="footer-social">
-        <a href="#" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
-        <a href="#" aria-label="Twitter"><i class="fa fa-twitter"></i></a>
-        <a href="#" aria-label="Google+"><i class="fa fa-google-plus"></i></a>
-        <a href="#" aria-label="LinkedIn"><i class="fa fa-linkedin"></i></a>
-      </div>
-      <p class="footer-disclaimer">This information is intended for health care professionals only. The decision to use Macway Biotech products should be made by a healthcare professional, in line with applicable local protocols.</p>
-    </div>
-  </div>
-
-  <!-- Back to Top -->
-  <button class="back-top" id="back-top" aria-label="Back to top">
-    <i class="fa fa-chevron-up"></i>
-  </button>
-
-  <!-- Modern JS (no jQuery) -->
   <script src="js/modern.js"></script>
 </body>
 </html>
