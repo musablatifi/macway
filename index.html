@@ -13,7 +13,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   
   <!-- Modern Single-Page CSS -->
-  <link rel="stylesheet" href="modern.css?v=26">
+  <link rel="stylesheet" href="modern.css?v=29">
 </head>
 <body>
 
@@ -34,7 +34,6 @@
           <li><a href="#specialties">Specialties</a></li>
           <li><a href="#commitment">Commitment</a></li>
           <li><a href="#values">Core Values</a></li>
-          <li><a href="#science">Science & Quality</a></li>
         </ul>
         <div class="nav-contact-icons" style="display: flex; gap: 12px; align-items: center;">
           <a href="tel:04040061999" aria-label="Phone" style="display: flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 50%; border: 1px solid rgba(0,0,0,0.15); color: #334155; text-decoration: none; transition: all 0.3s ease;" onmouseover="this.style.background='#334155'; this.style.color='#fff';" onmouseout="this.style.background='transparent'; this.style.color='#334155';"><i class="fa fa-phone"></i></a>
@@ -51,7 +50,6 @@
           <li><a href="#specialties" onclick="toggleMenu()">Specialties</a></li>
           <li><a href="#commitment" onclick="toggleMenu()">Commitment</a></li>
           <li><a href="#values" onclick="toggleMenu()">Core Values</a></li>
-          <li><a href="#science" onclick="toggleMenu()">Science & Quality</a></li>
         </ul>
         <div class="nav-contact-icons" style="display: flex; gap: 12px; align-items: center; justify-content: center; margin-top: 20px;">
           <a href="tel:04040061999" aria-label="Phone" class="mobile-icon"><i class="fa fa-phone"></i></a>
@@ -75,44 +73,67 @@
 
 
 
-  <!-- ── ABOUT / MAKROPHAGE ── -->
-  <section class="makrophage" id="about" style="background: #f8fafc; color: #334155;">
-    <div class="container">
-      <div class="section-kicker fade-up" style="margin-bottom: 60px;">About Macway Biotech</div>
-      
-      <!-- Row 1: Big Headline & Side Text -->
-      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; margin-bottom: 120px;" class="responsive-about-grid fade-up">
-        <div>
-          <h2 style="font-size: 3rem; line-height: 1.1; color: #0f172a; margin-bottom: 0; letter-spacing: -0.03em;">
-            Healing with Science.<br><span style="color: #64748b;">Advancing with Purpose.</span>
+  <!-- ── ABOUT MACWAY BIOTECH ── -->
+  <section class="about-editorial" id="about" style="background: #ffffff; padding: 120px 0;">
+    <div class="container fade-up">
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start;" class="responsive-about-grid">
+        
+        <!-- Left: Typography -->
+        <div style="padding-right: 20px;">
+          <div class="section-kicker" style="margin-bottom: 24px;">About Macway Biotech</div>
+          <h2 style="font-size: 3.5rem; line-height: 1.1; color: #0f172a; margin-bottom: 32px; letter-spacing: -0.03em;">
+            Healing with Science.<br><span style="color: var(--teal);">Advancing with Purpose.</span>
           </h2>
-        </div>
-        <div style="padding-top: 10px;">
-          <p style="color: #475569; font-size: 1.1rem; line-height: 1.7; margin-bottom: 16px;">
+          <p style="color: #475569; font-size: 1.15rem; line-height: 1.8; margin-bottom: 24px; text-align: justify;">
             Macway Biotech Private Limited is a Hyderabad-based specialty healthcare company dedicated to supporting healthcare professionals with reliable, clinically relevant and patient-focused solutions.
           </p>
-          <p style="color: #475569; font-size: 1.1rem; line-height: 1.7;">
+          <p style="color: #475569; font-size: 1.15rem; line-height: 1.8; text-align: justify;">
             Our portfolio spans the complete healing journey—from wound-bed preparation and infection management to tissue repair and wound closure. We also bring focused expertise to neuropathic pain, neuropsychiatry, reconstruction and fixation, sports medicine, trauma and extremity care.
           </p>
         </div>
+
+        <!-- Right: Glassmorphism / Imagery Grid -->
+        <div style="position: relative;">
+          <!-- A beautiful large image with rounded corners -->
+          <img src="images/2.jpg" alt="Science" style="width: 100%; border-radius: 24px; box-shadow: 0 30px 60px rgba(0,0,0,0.12);" />
+          
+          <!-- A floating glassmorphism card -->
+          <div style="position: absolute; bottom: -30px; left: -30px; background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); padding: 32px; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.08); border: 1px solid rgba(255,255,255,0.6); max-width: 320px;">
+            <i class="fa fa-flask" style="font-size: 2.5rem; color: var(--teal); margin-bottom: 16px;"></i>
+            <h4 style="font-size: 1.25rem; color: var(--navy); margin-bottom: 8px; font-weight: 600;">Specialty Healthcare</h4>
+            <p style="color: #64748b; font-size: 0.95rem; margin: 0; line-height: 1.6;">Reliable, clinically relevant, and patient-focused solutions.</p>
+          </div>
+        </div>
+
       </div>
-      
-      <!-- Row 2: Text & Image linked to Wound Management -->
-      <div style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 80px; align-items: center;" class="responsive-about-grid fade-up delay-1">
+    </div>
+  </section>
+
+  <!-- ── ADVANCED WOUND MANAGEMENT ── -->
+  <section class="makrophage-dark" id="makrophage" style="background: var(--navy); padding: 140px 0; color: white; position: relative; overflow: hidden;">
+    <!-- Abstract background circle -->
+    <div style="position: absolute; top: -20%; right: -10%; width: 700px; height: 700px; background: radial-gradient(circle, rgba(20, 184, 166, 0.15) 0%, rgba(20, 184, 166, 0) 70%); border-radius: 50%;"></div>
+    
+    <div class="container fade-up">
+      <div style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 80px; align-items: center;" class="responsive-about-grid">
+        
         <div>
-          <h2 style="font-size: 2rem; line-height: 1.2; color: #0f172a; margin-bottom: 24px; letter-spacing: -0.02em;">
-            Focused on<br><span style="color: #64748b;">Advanced Wound Management</span>
+          <div style="color: var(--teal); font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 24px;">Advanced Wound Management</div>
+          <h2 style="font-size: 3.5rem; line-height: 1.1; color: white; margin-bottom: 32px; letter-spacing: -0.02em; font-weight: 500;">
+            Focused on<br><span style="color: var(--teal);">Makrophage</span>
           </h2>
-          <p style="color: #475569; font-size: 1.05rem; line-height: 1.7; margin-bottom: 16px;">
+          <p style="color: rgba(255,255,255,0.8); font-size: 1.15rem; line-height: 1.8; margin-bottom: 24px;">
             Through <strong>Makrophage</strong>, our specialised wound-management division, we provide advanced and active wound-care solutions designed to address complex clinical needs across India.
           </p>
-          <p style="color: #475569; font-size: 1.05rem; line-height: 1.7;">
+          <p style="color: rgba(255,255,255,0.8); font-size: 1.15rem; line-height: 1.8;">
             By combining scientific understanding with practical clinical insight, we aim to make innovative wound-care technologies more accessible to healthcare professionals and help enable better outcomes for patients.
           </p>
         </div>
-        <div>
-          <img src="images/Macway_Four_Stages_Wound_Care_Cards.webp" alt="Four Stages of Wound Care: Prepare, Protect, Repair, Restore" style="width: 100%; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.08);" />
+        
+        <div style="position: relative; z-index: 1;">
+          <img src="images/Macway_Four_Stages_Wound_Care_Cards.webp" alt="Four Stages of Wound Care" style="width: 100%; border-radius: 24px; box-shadow: 0 30px 60px rgba(0,0,0,0.3);" />
         </div>
+
       </div>
     </div>
   </section>
@@ -165,40 +186,44 @@
     </div>
   </section>
 
-  <!-- ── COMMITMENT & QUALITY (CARD LAYOUT) ── -->
-  <section class="continuum" id="commitment" style="text-align: left; background: #f8fafc; padding: 100px 0;">
+  <!-- ── COMMITMENT & QUALITY (SYMMETRICAL LAYOUT) ── -->
+  <section class="continuum" id="commitment" style="text-align: center; background: #f8fafc; padding: 140px 0;">
     <div class="container fade-up">
-      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px;" class="responsive-about-grid">
-        
-        <!-- Dark Card -->
-        <div style="background: linear-gradient(135deg, #0f4c5c, #0a3641); border-radius: 24px; padding: 48px; color: white; display: flex; flex-direction: column; justify-content: space-between; min-height: 500px; box-shadow: 0 20px 40px rgba(0,0,0,0.1);">
-          <div>
+      
+      <!-- Headline separated out -->
+      <div class="section-heading" style="margin-bottom: 80px; text-align: center;">
+        <div class="section-kicker" style="margin-bottom: 24px; justify-content: center;">Our Commitment</div>
+        <h2 style="font-size: 4rem !important; line-height: 1.1; color: var(--navy); margin-bottom: 0; letter-spacing: -0.03em; font-weight: 500;">
+          Dedicated to Healing.
+        </h2>
+      </div>
 
-            <div style="color: var(--teal); font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px;">Our Commitment</div>
-            <h2 style="font-size: 3.5rem; line-height: 1.1; margin-bottom: 0; color: white; font-weight: 500;">Dedicated to Healing.</h2>
+      <!-- Symmetrical, premium cards -->
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; text-align: left;" class="responsive-about-grid">
+        
+        <!-- Card 1 -->
+        <div style="background: white; border-radius: 24px; padding: 56px; border: 1px solid rgba(0,0,0,0.05); display: flex; flex-direction: column; box-shadow: 0 20px 40px rgba(0,0,0,0.03); transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 30px 60px rgba(0,0,0,0.06)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 20px 40px rgba(0,0,0,0.03)';">
+          <div style="width: 80px; height: 80px; background: rgba(20, 184, 166, 0.1); border-radius: 24px; display: flex; align-items: center; justify-content: center; margin-bottom: 40px;">
+            <i class="fa fa-heartbeat" style="font-size: 2rem; color: var(--teal);"></i>
           </div>
-          <div style="margin-top: 40px;">
-            <p style="color: rgba(255,255,255,0.9); font-size: 1.1rem; line-height: 1.6; margin-bottom: 16px;">
-              Macway Biotech is committed to helping people regain healthier and more fulfilling lives through effective treatment, recovery and healing.
-            </p>
-            <p style="color: rgba(255,255,255,0.8); font-size: 1.05rem; line-height: 1.6; margin-bottom: 0;">
-              We value the trust of healthcare professionals, employees, distributors, dealers and institutional partners. Their continued support has helped establish Macway Biotech as a progressive and rapidly growing pharmaceutical company.
-            </p>
-          </div>
+          <h3 style="font-size: 2rem; color: var(--navy); margin-bottom: 24px; font-weight: 600;">Our Commitment</h3>
+          <p style="color: #64748b; font-size: 1.15rem; line-height: 1.8; margin-bottom: 24px;">
+            Macway Biotech is committed to helping people regain healthier and more fulfilling lives through effective treatment, recovery and healing.
+          </p>
+          <p style="color: #64748b; font-size: 1.15rem; line-height: 1.8; margin-bottom: 0;">
+            We value the trust of healthcare professionals, employees, distributors, dealers and institutional partners. Their continued support has helped establish Macway Biotech as a progressive and rapidly growing pharmaceutical company.
+          </p>
         </div>
 
-        <!-- White Card -->
-        <div style="background: white; border-radius: 24px; padding: 48px; border: 1px solid rgba(0,0,0,0.05); display: flex; flex-direction: column; min-height: 500px; box-shadow: 0 10px 30px rgba(0,0,0,0.03);">
-          <div>
-
-            <div style="width: 80px; height: 80px; background: rgba(20, 184, 166, 0.05); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 40px;">
-              <i class="fa fa-shield" style="font-size: 2rem; color: var(--teal);"></i>
-            </div>
-            <h3 style="font-size: 2rem; color: var(--navy); margin-bottom: 24px; font-weight: 500;">Quality and Compliance</h3>
-            <p style="color: #64748b; font-size: 1.1rem; line-height: 1.7; margin-bottom: 0;">
-              Quality, patient safety and responsible business practices remain central to everything we do. Where applicable, products within our portfolio are supported by recognised regulatory approvals and quality systems.
-            </p>
+        <!-- Card 2 -->
+        <div style="background: white; border-radius: 24px; padding: 56px; border: 1px solid rgba(0,0,0,0.05); display: flex; flex-direction: column; box-shadow: 0 20px 40px rgba(0,0,0,0.03); transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 30px 60px rgba(0,0,0,0.06)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 20px 40px rgba(0,0,0,0.03)';">
+          <div style="width: 80px; height: 80px; background: rgba(20, 184, 166, 0.1); border-radius: 24px; display: flex; align-items: center; justify-content: center; margin-bottom: 40px;">
+            <i class="fa fa-shield" style="font-size: 2rem; color: var(--teal);"></i>
           </div>
+          <h3 style="font-size: 2rem; color: var(--navy); margin-bottom: 24px; font-weight: 600;">Quality and Compliance</h3>
+          <p style="color: #64748b; font-size: 1.15rem; line-height: 1.8; margin-bottom: 0;">
+            Quality, patient safety and responsible business practices remain central to everything we do. Where applicable, products within our portfolio are supported by recognised regulatory approvals and quality systems.
+          </p>
         </div>
 
       </div>
@@ -241,45 +266,6 @@
     </div>
   </section>
 
-
-  <!-- ── SCIENCE & QUALITY ── -->
-  <section class="science" id="science">
-    <div class="container science-container fade-up">
-      <div class="science-art">
-        <div class="science-orb"><span></span><span></span><span></span><span></span></div>
-        <p>Evidence · Quality · Responsibility</p>
-      </div>
-      <div class="science-copy">
-        <div class="section-kicker">The Macway standard</div>
-        <h2>Science-led.<br><span>Responsibly communicated.</span></h2>
-        <p>Quality, patient safety and responsible business practices remain central to everything we do. Where applicable, products within our portfolio are supported by recognised regulatory approvals and quality systems.</p>
-        
-        <div class="science-points">
-          <div class="science-point">
-            <span>01</span>
-            <div>
-              <strong>Integrity and Transparency</strong>
-              <small>We conduct our business with honesty, accountability and transparency.</small>
-            </div>
-          </div>
-          <div class="science-point">
-            <span>02</span>
-            <div>
-              <strong>Quality</strong>
-              <small>We integrate quality into our products, services and processes.</small>
-            </div>
-          </div>
-          <div class="science-point">
-            <span>03</span>
-            <div>
-              <strong>Innovation and Excellence</strong>
-              <small>We encourage scientific thinking, continuous improvement and purposeful innovation.</small>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- ── FOOTER ── -->
   <footer class="site-footer" style="padding: 60px 0 20px; background: #011627; color: #ffffff; border-top: 1px solid rgba(255,255,255,0.05);">
