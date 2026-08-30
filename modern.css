@@ -678,7 +678,6 @@ ul { list-style: none; }
 
 @media (max-width: 768px) {
   .hero-slide.prev, .hero-slide.next {
-    opacity: 0 !important;
-    visibility: hidden;
+    display: none !important;
   }
 }
