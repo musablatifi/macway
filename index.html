@@ -13,7 +13,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   
   <!-- Modern Single-Page CSS -->
-  <link rel="stylesheet" href="modern.css?v=16">
+  <link rel="stylesheet" href="modern.css?v=18">
 </head>
 <body>
 
@@ -102,56 +102,48 @@
   <!-- ── SPECIALTIES ── -->
   <section class="specialties" id="specialties">
     <div class="container">
-      <div class="section-heading fade-up">
-        <div>
-          <div class="section-kicker">Where we focus</div>
-          <h2>Specialty care, built with purpose.</h2>
-        </div>
-        <p>Distinct therapy areas. One shared commitment: clearer clinical value and better-supported patient outcomes.</p>
-      </div>
       
-      <div class="specialty-grid fade-up delay-1">
+      <!-- Top Row: Text + Featured Image -->
+      <div style="display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 60px; align-items: start; margin-bottom: 32px;" class="responsive-about-grid fade-up">
         
-        <article class="specialty-featured glass-card">
-          <img src="images/Macway_Advanced_Wound_Management_Website_Card.webp" alt="Advanced Wound Management" class="specialty-bg-img">
-          <div class="specialty-content">
-            <span class="specialty-number">01</span>
-            <div class="specialty-text">
-              <small>Signature expertise</small>
-              <h3>Advanced Wound Management</h3>
-              <p>Integrated solutions across preparation, protection, tissue repair, scar care and recovery.</p>
-            </div>
-          </div>
-        </article>
-
-        <article class="specialty-card glass-card">
-          <img src="images/Macway_Neuro_Pain_Neuropathy_Website_Card.webp" alt="Neuro-Pain" class="specialty-bg-img">
-          <div class="specialty-content">
-            <span class="specialty-number">02</span>
-            <h3>Neuro-Pain & Neuropathy</h3>
-            <p>Targeted local and systemic support for complex pain pathways.</p>
-          </div>
-        </article>
-
-        <article class="specialty-card glass-card">
-          <img src="images/Macway_Neuropsychiatry_Website_Card.webp" alt="Neuropsychiatry" class="specialty-bg-img">
-          <div class="specialty-content">
-            <span class="specialty-number">03</span>
-            <h3>Neuropsychiatry</h3>
-            <p>Focused therapies supporting continuity of neuropsychiatric care.</p>
-          </div>
-        </article>
-
-        <article class="specialty-card glass-card">
-          <img src="images/Macway_Reconstruction_Fixation_Trauma_Website_Card.webp" alt="Reconstruction" class="specialty-bg-img">
-          <div class="specialty-content">
-            <span class="specialty-number">04</span>
-            <h3>Reconstruction & Fixation</h3>
-            <p>Solutions aligned to tissue recovery and reconstructive practice.</p>
-          </div>
-        </article>
-
+        <!-- Left Side: Text -->
+        <div style="padding-top: 10px;">
+          <div class="section-kicker" style="margin-bottom: 20px;">Innovation with Clinical Purpose</div>
+          <h2 style="font-size: 3rem; line-height: 1.1; color: #0f172a; margin-top: 0; letter-spacing: -0.03em; margin-bottom: 24px;">
+            Specialty care,<br><span style="color: #64748b;">built with purpose.</span>
+          </h2>
+          <p style="color: #475569; font-size: 1.1rem; line-height: 1.7; margin-bottom: 24px;">
+            Our approach begins with understanding the real challenges faced by doctors, hospitals and patients. This understanding guides us in developing and marketing products that are relevant, dependable and easy to integrate into clinical practice.
+          </p>
+          <p style="color: #475569; font-size: 1.1rem; line-height: 1.7;">
+            Every solution in our portfolio is driven by a clear purpose: to support healing, simplify treatment and improve quality of life.
+          </p>
+        </div>
+        
+        <!-- Right Side: Featured Image -->
+        <div>
+          <img src="images/Macway_Advanced_Wound_Management_Website_Card.webp" alt="Advanced Wound Management" style="width: 100%; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'" />
+        </div>
+        
       </div>
+
+      <!-- Bottom Row: 3 Images -->
+      <style>
+        .force-3-col-grid {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 24px;
+        }
+        @media (max-width: 768px) {
+          .force-3-col-grid { grid-template-columns: 1fr; }
+        }
+      </style>
+      <div class="force-3-col-grid fade-up delay-1">
+        <img src="images/Macway_Neuropsychiatry_Website_Card.webp" alt="Neuropsychiatry" style="width: 100%; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'" />
+        <img src="images/Macway_Neuro_Pain_Neuropathy_Website_Card.webp" alt="Neuro-Pain & Neuropathy" style="width: 100%; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'" />
+        <img src="images/Macway_Reconstruction_Fixation_Trauma_Website_Card.webp" alt="Reconstruction, Fixation & Trauma" style="width: 100%; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'" />
+      </div>
+
     </div>
   </section>
 
