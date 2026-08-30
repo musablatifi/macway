@@ -518,7 +518,7 @@ ul { list-style: none; }
   position: fixed;
   bottom: 110px;
   right: 30px;
-  width: 350px;
+  width: min(350px, calc(100vw - 60px));
   height: 500px;
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(20px);
@@ -669,10 +669,15 @@ ul { list-style: none; }
 
 @media (max-width: 480px) {
   .chatbot-window {
-    width: calc(100% - 40px);
-    right: 20px;
+    width: calc(100vw - 40px);
+    right: 16px;
+    left: 16px;
     bottom: 100px;
     height: 450px;
+  }
+  .chatbot-toggle {
+    right: 16px;
+    bottom: 20px;
   }
 }
 
