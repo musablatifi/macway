@@ -278,6 +278,7 @@ ul { list-style: none; }
 
 /* ── ABOUT / MAKROPHAGE ── */
 .makrophage { padding: 120px 0; }
+.makrophage-dark { position: relative; overflow: hidden; }
 .makrophage-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; }
 .makrophage-title h2 { font-size: 2.5rem; line-height: 1.2; }
 .makrophage-title span { color: var(--teal); }
@@ -377,6 +378,7 @@ ul { list-style: none; }
 .background-circle {
   position: absolute; top: -20%; right: -10%; width: 700px; height: 700px;
   background: radial-gradient(circle, rgba(20, 184, 166, 0.15) 0%, rgba(20, 184, 166, 0) 70%); border-radius: 50%;
+  pointer-events: none;
 }
 .makrophage-visual { position: relative; z-index: 1; }
 .makrophage-visual img { width: 100%; border-radius: 24px; box-shadow: 0 30px 60px rgba(0,0,0,0.3); }
@@ -428,6 +430,7 @@ ul { list-style: none; }
   
   .hero-actions { flex-direction: column; }
   .hcp-actions { flex-direction: column; }
+  .background-circle { display: none; }
 }
 
 /* ── CORE VALUES GRID (Sleek horizontal layout) ── */
