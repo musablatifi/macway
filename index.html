@@ -13,7 +13,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   
   <!-- Modern Single-Page CSS -->
-  <link rel="stylesheet" href="modern.css?v=30">
+  <link rel="stylesheet" href="modern.css?v=31">
 </head>
 <body>
 
@@ -139,21 +139,31 @@
   </section>
 
   <!-- ── SPECIALTIES ── -->
-  <section class="specialties" id="specialties" style="padding: 140px 0; background: #ffffff;">
+  <section class="specialties" id="specialties">
     <div class="container">
       
-      <!-- Centered Header -->
-      <div class="section-heading fade-up" style="text-align: center; margin-bottom: 80px; max-width: 800px; margin-left: auto; margin-right: auto;">
-        <div class="section-kicker" style="margin-bottom: 24px; justify-content: center;">Innovation with Clinical Purpose</div>
-        <h2 style="font-size: 4rem !important; line-height: 1.1; color: #0f172a; margin-top: 0; letter-spacing: -0.03em; margin-bottom: 32px; font-weight: 500;">
-          Specialty care,<br><span style="color: #64748b;">built with purpose.</span>
-        </h2>
-        <p style="color: #475569; font-size: 1.15rem; line-height: 1.8; margin-bottom: 24px;">
-          Our approach begins with understanding the real challenges faced by doctors, hospitals and patients. This understanding guides us in developing and marketing products that are relevant, dependable and easy to integrate into clinical practice.
-        </p>
-        <p style="color: #475569; font-size: 1.15rem; line-height: 1.8;">
-          Every solution in our portfolio is driven by a clear purpose: to support healing, simplify treatment and improve quality of life.
-        </p>
+      <!-- Top Row: Text + Featured Image -->
+      <div style="display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 60px; align-items: start; margin-bottom: 32px;" class="responsive-about-grid fade-up">
+        
+        <!-- Left Side: Text -->
+        <div style="padding-top: 10px;">
+          <div class="section-kicker" style="margin-bottom: 20px;">Innovation with Clinical Purpose</div>
+          <h2 style="font-size: 3rem; line-height: 1.1; color: #0f172a; margin-top: 0; letter-spacing: -0.03em; margin-bottom: 24px;">
+            Specialty care,<br><span style="color: #64748b;">built with purpose.</span>
+          </h2>
+          <p style="color: #475569; font-size: 1.1rem; line-height: 1.7; margin-bottom: 24px; text-align: justify;">
+            Our approach begins with understanding the real challenges faced by doctors, hospitals and patients. This understanding guides us in developing and marketing products that are relevant, dependable and easy to integrate into clinical practice.
+          </p>
+          <p style="color: #475569; font-size: 1.1rem; line-height: 1.7; text-align: justify;">
+            Every solution in our portfolio is driven by a clear purpose: to support healing, simplify treatment and improve quality of life.
+          </p>
+        </div>
+        
+        <!-- Right Side: Featured Image -->
+        <div>
+          <img src="images/Macway_Advanced_Wound_Management_Website_Card.webp" alt="Advanced Wound Management" style="width: 100%; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'" />
+        </div>
+        
       </div>
 
       <!-- Bottom Row: 3 Images -->
