@@ -13,7 +13,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   
   <!-- Modern Single-Page CSS -->
-  <link rel="stylesheet" href="modern.css?v=37">
+  <link rel="stylesheet" href="modern.css?v=38">
 </head>
 <body>
 
@@ -304,12 +304,122 @@
     </div>
   </footer>
 
+  <!-- ── AI CHATBOT WIDGET ── -->
+  <!-- Chatbot Toggle Button -->
+  <div class="chatbot-toggle" id="chatbotToggle" onclick="toggleChat()" aria-label="Open Chat">
+    <i class="fa fa-comments"></i>
+  </div>
+
+  <!-- Chatbot Window -->
+  <div class="chatbot-window" id="chatbotWindow">
+    <div class="chat-header">
+      <div class="chat-header-info">
+        <div class="chat-avatar">
+          <i class="fa fa-robot"></i>
+        </div>
+        <div>
+          <div class="chat-title">Macway Assistant</div>
+          <div class="chat-status">Online</div>
+        </div>
+      </div>
+      <button class="chat-close" onclick="toggleChat()" aria-label="Close Chat">
+        <i class="fa fa-times"></i>
+      </button>
+    </div>
+    
+    <div class="chat-messages" id="chatMessages">
+      <div class="chat-message message-bot">
+        Hello! I'm the Macway AI Assistant. How can I help you today?
+      </div>
+    </div>
+
+    <div class="chat-input-area">
+      <input type="text" id="chatInput" placeholder="Type your message..." onkeypress="handleChatKeyPress(event)">
+      <button class="chat-send-btn" onclick="sendChatMessage()" aria-label="Send Message">
+        <i class="fa fa-paper-plane"></i>
+      </button>
+    </div>
+  </div>
+
   <script src="js/modern.js"></script>
-  <!-- JavaScript for Mobile Menu -->
+  <!-- JavaScript for Mobile Menu & Chatbot -->
   <script>
     function toggleMenu() {
       const drawer = document.getElementById('mobileDrawer');
       drawer.classList.toggle('open');
+    }
+
+    // Chatbot Logic
+    const chatbotWindow = document.getElementById('chatbotWindow');
+    const chatMessages = document.getElementById('chatMessages');
+    const chatInput = document.getElementById('chatInput');
+    
+    function toggleChat() {
+      chatbotWindow.classList.toggle('active');
+      if(chatbotWindow.classList.contains('active')) {
+        chatInput.focus();
+      }
+    }
+
+    function handleChatKeyPress(event) {
+      if (event.key === 'Enter') {
+        sendChatMessage();
+      }
+    }
+
+    function sendChatMessage() {
+      const message = chatInput.value.trim();
+      if (!message) return;
+
+      // Add User Message
+      addMessage(message, 'user');
+      chatInput.value = '';
+
+      // Simulate Bot "Typing..."
+      setTimeout(() => {
+        const typingId = 'typing-' + Date.now();
+        addMessage('typing...', 'bot', typingId);
+        
+        // Simulate Bot Response
+        setTimeout(() => {
+          removeMessage(typingId);
+          const response = getSimulatedBotResponse(message);
+          addMessage(response, 'bot');
+        }, 1500);
+      }, 500);
+    }
+
+    function addMessage(text, sender, id = null) {
+      const msgDiv = document.createElement('div');
+      msgDiv.className = `chat-message message-${sender}`;
+      if (id) msgDiv.id = id;
+      
+      if (text === 'typing...') {
+        msgDiv.innerHTML = '<span style="font-style: italic; opacity: 0.7;">typing...</span>';
+      } else {
+        msgDiv.textContent = text;
+      }
+      
+      chatMessages.appendChild(msgDiv);
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+
+    function removeMessage(id) {
+      const msgDiv = document.getElementById(id);
+      if (msgDiv) msgDiv.remove();
+    }
+
+    function getSimulatedBotResponse(userMsg) {
+      const lowerMsg = userMsg.toLowerCase();
+      if (lowerMsg.includes('hello') || lowerMsg.includes('hi')) {
+        return "Hi there! Feel free to ask me anything about Macway Biotech's products or services.";
+      } else if (lowerMsg.includes('contact') || lowerMsg.includes('phone') || lowerMsg.includes('email')) {
+        return "You can reach us at +91 88854 34343 or email us at macway.biotech@gmail.com.";
+      } else if (lowerMsg.includes('makrophage') || lowerMsg.includes('wound')) {
+        return "Makrophage is our specialised wound-management division, focused on advanced active wound-care solutions.";
+      } else {
+        return "Thank you for reaching out! Our team is currently reviewing your inquiry. Please call +91 88854 34343 if you need immediate assistance.";
+      }
     }
   </script>
 </body>
