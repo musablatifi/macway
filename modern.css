@@ -673,3 +673,10 @@ ul { list-style: none; }
     height: 450px;
   }
 }
+
+@media (max-width: 768px) {
+  .hero-slide.prev, .hero-slide.next {
+    opacity: 0 !important;
+    visibility: hidden;
+  }
+}
