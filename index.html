@@ -13,7 +13,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   
   <!-- Modern Single-Page CSS -->
-  <link rel="stylesheet" href="modern.css?v=23">
+  <link rel="stylesheet" href="modern.css?v=24">
 </head>
 <body>
 
@@ -165,29 +165,42 @@
     </div>
   </section>
 
-  <!-- ── COMMITMENT & QUALITY ── -->
-  <section class="continuum section-dark" id="commitment" style="text-align: left; background: var(--navy);">
+  <!-- ── COMMITMENT & QUALITY (CARD LAYOUT) ── -->
+  <section class="continuum" id="commitment" style="text-align: left; background: #f8fafc; padding: 100px 0;">
     <div class="container fade-up">
-      <div class="section-heading">
-        <div class="section-kicker">Our Commitment</div>
-        <h2 style="color: var(--white);">Dedicated to Healing.</h2>
-      </div>
-      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px;" class="responsive-about-grid fade-up delay-1">
-        <div>
-          <h3 style="color: var(--teal); font-size: 1.5rem; margin-bottom: 16px;">Our Commitment</h3>
-          <p style="color: rgba(255,255,255,0.8); font-size: 1.1rem; line-height: 1.7; margin-bottom: 24px;">
-            Macway Biotech is committed to helping people regain healthier and more fulfilling lives through effective treatment, recovery and healing.
-          </p>
-          <p style="color: rgba(255,255,255,0.8); font-size: 1.1rem; line-height: 1.7;">
-            We value the trust of healthcare professionals, employees, distributors, dealers and institutional partners. Their continued support has helped establish Macway Biotech as a progressive and rapidly growing pharmaceutical company.
-          </p>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px;" class="responsive-about-grid">
+        
+        <!-- Dark Card -->
+        <div style="background: linear-gradient(135deg, #0f4c5c, #0a3641); border-radius: 24px; padding: 48px; color: white; display: flex; flex-direction: column; justify-content: space-between; min-height: 500px; box-shadow: 0 20px 40px rgba(0,0,0,0.1);">
+          <div>
+            <div style="color: var(--teal); font-size: 0.85rem; font-weight: 700; margin-bottom: 60px;">01</div>
+            <div style="color: var(--teal); font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px;">Our Commitment</div>
+            <h2 style="font-size: 3.5rem; line-height: 1.1; margin-bottom: 0; color: white; font-weight: 500;">Dedicated to Healing.</h2>
+          </div>
+          <div style="margin-top: 40px;">
+            <p style="color: rgba(255,255,255,0.9); font-size: 1.1rem; line-height: 1.6; margin-bottom: 16px;">
+              Macway Biotech is committed to helping people regain healthier and more fulfilling lives through effective treatment, recovery and healing.
+            </p>
+            <p style="color: rgba(255,255,255,0.8); font-size: 1.05rem; line-height: 1.6; margin-bottom: 0;">
+              We value the trust of healthcare professionals, employees, distributors, dealers and institutional partners. Their continued support has helped establish Macway Biotech as a progressive and rapidly growing pharmaceutical company.
+            </p>
+          </div>
         </div>
-        <div>
-          <h3 style="color: var(--teal); font-size: 1.5rem; margin-bottom: 16px;">Quality and Compliance</h3>
-          <p style="color: rgba(255,255,255,0.8); font-size: 1.1rem; line-height: 1.7;">
-            Quality, patient safety and responsible business practices remain central to everything we do. Where applicable, products within our portfolio are supported by recognised regulatory approvals and quality systems.
-          </p>
+
+        <!-- White Card -->
+        <div style="background: white; border-radius: 24px; padding: 48px; border: 1px solid rgba(0,0,0,0.05); display: flex; flex-direction: column; min-height: 500px; box-shadow: 0 10px 30px rgba(0,0,0,0.03);">
+          <div>
+            <div style="color: var(--teal); font-size: 0.85rem; font-weight: 700; margin-bottom: 60px;">02</div>
+            <div style="width: 80px; height: 80px; background: rgba(20, 184, 166, 0.05); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 40px;">
+              <i class="fa fa-shield" style="font-size: 2rem; color: var(--teal);"></i>
+            </div>
+            <h3 style="font-size: 2rem; color: var(--navy); margin-bottom: 24px; font-weight: 500;">Quality and Compliance</h3>
+            <p style="color: #64748b; font-size: 1.1rem; line-height: 1.7; margin-bottom: 0;">
+              Quality, patient safety and responsible business practices remain central to everything we do. Where applicable, products within our portfolio are supported by recognised regulatory approvals and quality systems.
+            </p>
+          </div>
         </div>
+
       </div>
     </div>
   </section>
